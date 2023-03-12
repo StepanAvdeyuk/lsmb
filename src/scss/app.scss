@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: "Druk Text Wide Cyr";
+    font-weight: 500;
+    src : url("../assets/fonts/drukwidecyr-medium.otf");
+}
+
+@import './libs/slick.scss';
+@import './libs/slick-theme.scss';
+
+@import './libs/normalize';
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    background:#0C0C0C;
+    position: relative;
+}
+
+.container {
+    width: 1156px;
+    margin: 0 auto;
+}
+
+@import './page';
