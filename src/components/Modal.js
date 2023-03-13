@@ -3,11 +3,13 @@ import { Formik, Form, Field, ErrorMessage, useField } from 'formik';
 import * as Yup from 'yup';
 import { Link, redirect } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-
+import axios from 'axios';
+import { useId } from "react-id-generator";
 
 const Modal = ({setIsOpenModal, allowScroll}) => {
 
     const navigate = useNavigate();
+    const [htmlId] = useId();
 
     const validate = Yup.object({
         name: Yup.string()
@@ -17,7 +19,7 @@ const Modal = ({setIsOpenModal, allowScroll}) => {
         email: Yup.string()
             .required('Обязательное поле')
             .email('Неверно указан email'),
-        sport: Yup.string()
+        sportingRecords: Yup.string()
             .max(100, 'Введите не более 100 символов'),
         
     })
@@ -37,24 +39,20 @@ const Modal = ({setIsOpenModal, allowScroll}) => {
         )
     }
 
-    // const sendData = () => {
-    //     gapi.client.init({
-    //         'apiKey': '{AIzaSyDy6gNRtQjSJ_geNcikF4vq2AvONMa1nzc}',
-    //         'discoveryDocs': ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
-    //     }).then(() => {
-    //         return gapi.client.sheets.spreadsheets.values.get({
-    //           spreadsheetId: '{1bT0BDXEYO0KPn-3rV0Yt939Q4TsOgKeVU_F2RcxrPyk}',
-    //           range: '{test1}!{A1:E1}', // for example: List 1!A1:B6
-    //         })
-    //       })
-    // }
-
-    
-
-
-    // React.useEffect(() => {
-    //     appendSpreadsheet(newRow);
-    // }, []);
+    const sendData = (values) => {
+        let data = {};
+        data.id = htmlId;
+        data.fio = values.name;
+        data.email = values.email;
+        data.phone = values.phoneNumber;
+        data.socialNetworks = values.socialNetworks;
+        data.sportingRecords = values.sportingRecords;
+        console.log(data);
+        axios.post("http://5.23.55.70:3000/leads/add", data)
+        .then((response) => {
+        console.log(response);
+        }).catch(e => console.log(e));
+    }
 
 
     return (
@@ -62,10 +60,10 @@ const Modal = ({setIsOpenModal, allowScroll}) => {
         <div className="modal__content">
         <div className="modal__close" onClick={() => {setIsOpenModal(false); allowScroll();}}>✕</div>
         <Formik
-                initialValues={{name: '', phoneNumber: '', social: '', sport: '', email: ''}}   
+                initialValues={{name: '', phoneNumber: '', socialNetworks: '', sportingRecords: '', email: ''}}   
                 validationSchema={validate}
                 onSubmit={(values, {resetForm}) => {
-                    // sentTelegramMessage(values);
+                    sendData(values);
                     resetForm();
                     allowScroll();
                     setIsOpenModal(false);
@@ -93,13 +91,13 @@ const Modal = ({setIsOpenModal, allowScroll}) => {
                     <TextField  
                             placeholder="Введите ваши ссылки"
                             type="text"
-                            name="social"
+                            name="socialNetworks"
                             label="Ссылки на ваши соцсети"
                     />
                     <TextField  
                             placeholder="Введите ваши спортивные достижения"
                             type="text"
-                            name="sport"
+                            name="sportingRecords"
                             label="Ваши спортивные достижения"
                     />
                     <button type="submit" className='modal__form-btn'>ОТПРАВИТЬ ДАННЫЕ</button>
