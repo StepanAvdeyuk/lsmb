@@ -48,7 +48,7 @@ const Modal = ({setIsOpenModal, allowScroll}) => {
         data.socialNetworks = values.socialNetworks;
         data.sportingRecords = values.sportingRecords;
         console.log(data);
-        axios.post("http://5.23.55.70:3000/leads/add", data)
+        axios.post("https://my-parser.tw1.su/leads/add", data)
         .then((response) => {
         console.log(response);
         }).catch(e => console.log(e));
