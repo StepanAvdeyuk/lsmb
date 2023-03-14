@@ -28,9 +28,9 @@ const MainPage = () => {
         <FirstScreen/>
         <Header/>
         <Promo setIsOpenModal={setIsOpenModal} blockScroll={blockScroll}/>
-        <Register setIsOpenModal={setIsOpenAboutModal} blockScroll={blockScroll}/>
+        <Register setIsOpenModal={setIsOpenDraftModal} blockScroll={blockScroll}/>
         <Teams/>
-        <Buy setIsOpenModal={setIsOpenDraftModal} blockScroll={blockScroll}/>
+        <Buy setIsOpenModal={setIsOpenAboutModal} blockScroll={blockScroll}/>
         <Footer/>
         {isOpenModal && <Modal setIsOpenModal={setIsOpenModal} allowScroll={allowScroll}/>}
         {isOpenDraftModal && <DraftModal setIsOpenDraftModal={setIsOpenDraftModal} setIsOpenModal={setIsOpenModal} allowScroll={allowScroll}/>}
