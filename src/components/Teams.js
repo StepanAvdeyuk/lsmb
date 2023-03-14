@@ -2,6 +2,8 @@ import React from 'react'
 
 import Slider from "react-slick";
 
+import useScrollBlock from '../hooks/useScrollBlock';
+
 import arrow from '../assets/arrow.svg';
 import arrow_s from '../assets/arrow-s.svg';
 import logo from '../assets/logo.svg';
@@ -35,6 +37,8 @@ const data = [{
 
 const Teams = () => {
 
+  const [blockScroll, allowScroll] = useScrollBlock();
+
   const [isOpenModal, setIsOpenModal] = React.useState(false);
   const [activeModal, setActiveModal] = React.useState(0);
   
@@ -60,7 +64,7 @@ const Teams = () => {
       <Slider {...settings}>
         {data && data.map((item, i) => {
           return <div>
-            <div className="teams__item" onClick={() => {setIsOpenModal(true); setActiveModal(i);}}>
+            <div className="teams__item" onClick={() => {setIsOpenModal(true); blockScroll(); setActiveModal(i);}}>
               <img src={logo} alt="logo" />
               <p>{item.name}</p>
             </div>
@@ -77,7 +81,7 @@ const Teams = () => {
     <div className="teams__slider">
       <SimpleSlider/>
     </div>
-    {isOpenModal && <TeamModal setIsOpenModal={setIsOpenModal} name={data[activeModal].name} descr={data[activeModal].descr}/>}
+    {isOpenModal && <TeamModal setIsOpenModal={setIsOpenModal} allowScroll={allowScroll} name={data[activeModal].name} descr={data[activeModal].descr}/>}
     </>
   )
 }

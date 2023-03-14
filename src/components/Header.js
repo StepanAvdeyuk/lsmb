@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, animateScroll as scroll } from "react-scroll";
 import { redirect } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-
+import useScrollBlock from '../hooks/useScrollBlock';
 
 import logo from '../assets/logo.svg'
 
@@ -10,6 +10,8 @@ const Header = () => {
 
   const [isOpenSidebar, setIsOpenSidebar] = React.useState(false);
   const navigate = useNavigate();
+
+  const [blockScroll, allowScroll] = useScrollBlock();
 
   return (
     <>
@@ -26,7 +28,7 @@ const Header = () => {
                         </ul>
                     </nav>
                 </div>
-                <div className="header__burger" onClick={() => setIsOpenSidebar(true)}>
+                <div className="header__burger" onClick={() => {setIsOpenSidebar(true); blockScroll()}}>
                     <div></div>
                     <div></div>
                     <div></div>
@@ -35,7 +37,7 @@ const Header = () => {
         </div>
     </div>
     <div className={isOpenSidebar ? "header__sidebar active" : "header__sidebar"} >
-            <div className="header__sidebar-close" onClick={() => setIsOpenSidebar(false)}>✕</div>
+            <div className="header__sidebar-close" onClick={() => {setIsOpenSidebar(false); allowScroll()}}>✕</div>
             <ul>
                 <Link to="register" smooth={true} duration={400} offset={-200} onClick={() => {setIsOpenSidebar(false); navigate('/')}}><li>Регистрация</li></Link>
                 <Link to="buy" smooth={true} duration={600} offset={-130} onClick={() => {setIsOpenSidebar(false); navigate('/')}}><li>Купить билеты</li></Link>

@@ -6,11 +6,11 @@ import youtube from '../assets/youtube.svg';
 import telegram from '../assets/telegram.svg';
 import vk from '../assets/vk.svg';
 
-const TeamModal = ({setIsOpenModal, name, descr}) => {
+const TeamModal = ({setIsOpenModal, name, descr, allowScroll}) => {
   return (
     <div className="team-modal__wrapper">
         <div className="team-modal__content">
-            <div className="modal__close" onClick={() => setIsOpenModal(false)}>✕</div>
+            <div className="modal__close" onClick={() => {setIsOpenModal(false); allowScroll();}}>✕</div>
             <div className="team-modal__item">
               <img src={logo} alt="logo" />
               <p>{name}</p>
