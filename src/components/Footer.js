@@ -36,7 +36,7 @@ const Footer = () => {
              <p>Вернуться наверх</p>
              <img src={arrow}/>
             </div> */}
-            <Link to="header" smooth={true} duration={700} offset={0}>
+            <Link to="header" smooth={true} duration={700} offset={-60}>
                 <div className="footer__to-top">
                     <p>Вернуться наверх</p>
                     <img src={arrow}/>

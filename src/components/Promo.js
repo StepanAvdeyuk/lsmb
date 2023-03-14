@@ -19,7 +19,7 @@ const Promo = ({setIsOpenModal, blockScroll}) => {
 
   return (
     <div className="container">
-        <div className="promo__wrapper">
+        <div className="promo__wrapper" id="header">
             <img src={lsmb} alt="lsmb" className='promo__lsmb-mob' />
             <h1>Лига <span>Ставок<img src={lsmb} alt="lsmb" /></span><br/>Медиа Баскет</h1>
             <div className="promo__descr">
