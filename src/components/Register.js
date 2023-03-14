@@ -9,7 +9,7 @@ const Register = ({setIsOpenModal, blockScroll}) => {
             <h2>
             ЗАРЕГИСТРИРУЙТЕСЬ <br/>НА СЕЗОН ПРЯМО СЕЙЧАС
             </h2>
-            <button className="register__btn" onClick={() => {setIsOpenModal(true); blockScroll();}}>ОСТАВИТЬ ЗАЯВКУ</button>
+            <button className="register__btn" onClick={() => {setIsOpenModal(true); blockScroll();}}>О ТУРНИРЕ</button>
             <img src={bg} className='register__bg'/>
         </div>
     </div>

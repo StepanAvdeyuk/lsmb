@@ -3,8 +3,10 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 import logo from '../assets/logo.svg';
 import arrow from '../assets/arrow-top.svg';
-import facebook from '../assets/facebook.svg';
-import instagram from '../assets/instagram.svg';
+
+import youtube from '../assets/youtube-s.svg';
+import telegram from '../assets/telegram-s.svg';
+import vk from '../assets/vk-s.svg';
 
 const Footer = () => {
   return (
@@ -21,10 +23,13 @@ const Footer = () => {
             </nav>
             <div className="footer__links">
                 <a href="#">
-                    <img src={facebook} alt="facebook" />
+                    <img src={youtube} alt="facebook" />
                 </a>
                 <a href="#">
-                    <img src={instagram} alt="instagram" />
+                    <img src={telegram} alt="instagram" />
+                </a>
+                <a href="#">
+                    <img src={vk} alt="instagram" />
                 </a>
             </div>
             {/* <div className="footer__to-top">

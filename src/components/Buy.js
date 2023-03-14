@@ -27,7 +27,7 @@ const Buy = ({setIsOpenModal, blockScroll}) => {
                         <div className="buy__bg-text">Уникальный спортивно-развлекательный проект объединивший в себе</div>
                     </div>
                 </div>
-                <div className="buy__btn"  onClick={() => {setIsOpenModal(true); blockScroll();}}>КУПИТЬ БИЛЕТ</div>
+                <div className="buy__btn"  onClick={() => {setIsOpenModal(true); blockScroll();}}>ПРИНЯТЬ УЧАСТИЕ</div>
                 <div className="buy__price">$159</div>
             </div>
         </div>

@@ -50,7 +50,7 @@ const Modal = ({setIsOpenModal, allowScroll}) => {
         console.log(data);
         axios.post("https://my-parser.tw1.su/leads/add", data)
         .then((response) => {
-        console.log(response);
+        // console.log(response);
         }).catch(e => console.log(e));
     }
 

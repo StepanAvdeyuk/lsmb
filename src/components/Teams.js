@@ -3,6 +3,7 @@ import React from 'react'
 import Slider from "react-slick";
 
 import arrow from '../assets/arrow.svg';
+import arrow_s from '../assets/arrow-s.svg';
 import logo from '../assets/logo.svg';
 import TeamModal from './TeamModal';
 
@@ -52,7 +53,7 @@ const Teams = () => {
         { breakpoint: 1600, settings: { slidesToShow: 5 } }, 
         { breakpoint: 1400, settings: { slidesToShow: 4 } },
         { breakpoint: 1100, settings: { slidesToShow: 3 } }, 
-        { breakpoint: 850, settings: { slidesToShow: 1} }, 
+        { breakpoint: 850, settings: { slidesToShow: 1, nextArrow: <div><img src={arrow_s}/></div>, prevArrow: <div><img src={arrow_s}/></div>,} }, 
       ]
     };
     return (
