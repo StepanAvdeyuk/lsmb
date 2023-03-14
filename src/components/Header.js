@@ -37,11 +37,11 @@ const Header = () => {
         </div>
     </div>
     <div className={isOpenSidebar ? "header__sidebar active" : "header__sidebar"} >
-            <div className="header__sidebar-close" onClick={() => {setIsOpenSidebar(false); allowScroll()}}>✕</div>
+            <div className="header__sidebar-close" onClick={() => {setIsOpenSidebar(false); allowScroll();}}>✕</div>
             <ul>
-                <Link to="register" smooth={true} duration={400} offset={-200} onClick={() => {setIsOpenSidebar(false); navigate('/')}}><li>Регистрация</li></Link>
-                <Link to="buy" smooth={true} duration={600} offset={-130} onClick={() => {setIsOpenSidebar(false); navigate('/')}}><li>Купить билеты</li></Link>
-                <Link to="footer" smooth={true} duration={700} offset={-80} onClick={() => {setIsOpenSidebar(false); navigate('/')}}><li>Контакты</li></Link>
+                <Link to="register" smooth={true} duration={400} offset={-200} onClick={() => {setIsOpenSidebar(false); allowScroll(); navigate('/')}}><li>Регистрация</li></Link>
+                <Link to="buy" smooth={true} duration={600} offset={-130} onClick={() => {setIsOpenSidebar(false); allowScroll(); navigate('/')}}><li>Купить билеты</li></Link>
+                <Link to="footer" smooth={true} duration={700} offset={-80} onClick={() => {setIsOpenSidebar(false); allowScroll(); navigate('/')}}><li>Контакты</li></Link>
             </ul>
     </div>
     </>
