@@ -13,6 +13,7 @@
     "google-sheets-api": "^1.0.1",
     "google-spreadsheet": "^3.3.0",
     "react": "^18.2.0",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
     "react-google-sheets": "^0.4.0",
     "react-id-generator": "^3.0.2",

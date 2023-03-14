@@ -1,11 +1,12 @@
 import React from 'react'
 
+import { isSafari } from "react-device-detect";
+
 import video from "../assets/background.mp4"
 import videoSafari from "../assets/background.gif"
 
-const Video = () => {
 
-  const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+const Video = () => {
 
   return (
     <div className="video__wrapper">
