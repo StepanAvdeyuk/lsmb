@@ -23,7 +23,7 @@ const Header = () => {
                     <nav>
                         <ul>
                             <Link to="register" smooth={true} duration={400} offset={-200} onClick={() => navigate("/")}><li>Регистрация</li></Link>
-                            <Link to="buy" smooth={true} duration={600} offset={-130} onClick={() => navigate("/")}><li>Купить билеты</li></Link>
+                            {/* <Link to="buy" smooth={true} duration={600} offset={-130} onClick={() => navigate("/")}><li>Купить билеты</li></Link> */}
                             <Link to="footer" smooth={true} duration={700} offset={-80} onClick={() => navigate("/")}><li>Контакты</li></Link>
                         </ul>
                     </nav>
@@ -40,7 +40,7 @@ const Header = () => {
             <div className="header__sidebar-close" onClick={() => {setIsOpenSidebar(false); allowScroll();}}>✕</div>
             <ul>
                 <Link to="register" smooth={true} duration={400} offset={-200} onClick={() => {setIsOpenSidebar(false); allowScroll(); navigate('/')}}><li>Регистрация</li></Link>
-                <Link to="buy" smooth={true} duration={600} offset={-130} onClick={() => {setIsOpenSidebar(false); allowScroll(); navigate('/')}}><li>Купить билеты</li></Link>
+                {/* <Link to="buy" smooth={true} duration={600} offset={-130} onClick={() => {setIsOpenSidebar(false); allowScroll(); navigate('/')}}><li>Купить билеты</li></Link> */}
                 <Link to="footer" smooth={true} duration={700} offset={-80} onClick={() => {setIsOpenSidebar(false); allowScroll(); navigate('/')}}><li>Контакты</li></Link>
             </ul>
     </div>

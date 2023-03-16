@@ -29,8 +29,8 @@ const MainPage = () => {
         <Header/>
         <Promo setIsOpenModal={setIsOpenModal} blockScroll={blockScroll}/>
         <Register setIsOpenModal={setIsOpenDraftModal} blockScroll={blockScroll}/>
-        <Teams/>
-        <Buy setIsOpenModal={setIsOpenAboutModal} blockScroll={blockScroll}/>
+        {/* <Teams/> */}
+        {/* <Buy setIsOpenModal={setIsOpenAboutModal} blockScroll={blockScroll}/> */}
         <Footer/>
         {isOpenModal && <Modal setIsOpenModal={setIsOpenModal} allowScroll={allowScroll}/>}
         {isOpenDraftModal && <DraftModal setIsOpenDraftModal={setIsOpenDraftModal} setIsOpenModal={setIsOpenModal} allowScroll={allowScroll}/>}

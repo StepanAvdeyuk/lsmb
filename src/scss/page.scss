@@ -67,8 +67,14 @@
         nav {
             ul {
                 display: flex;
-                width: 400px;
+                // width: 400px;
                 justify-content: space-between;
+                a {
+                    margin-right: 30px;
+                    &:last-child { 
+                        margin-right: 0; 
+                    }
+                }
                 li {
                     color: #A3A3A3;
                     font-weight: 400;
@@ -371,8 +377,14 @@
         nav {
             ul {
                 display: flex;
-                width: 400px;
+                // width: 400px;
                 justify-content: space-between;
+                a {
+                    margin-right: 30px;
+                    &:last-child { 
+                        margin-right: 0; 
+                    }
+                }
                 li {
                     color: #A3A3A3;
                     font-weight: 400;
@@ -1071,7 +1083,7 @@
             }
             nav {
                 ul {
-                    width: 370px;
+                    // width: 370px;
                 }
             }
         }
@@ -1173,7 +1185,7 @@
             }
             nav {
                 ul {
-                    width: 350px;
+                    // width: 350px;
                 }
             }
         }
@@ -1298,7 +1310,7 @@
             }
             nav {
                 ul {
-                    width: 308px;
+                    // width: 308px;
                     li {
                         font-size: 15px;
                     }
@@ -1469,9 +1481,10 @@
                 width: 190px;
             }
             nav {
+                
                 ul {
                     margin: 30px 0;
-                    width: 350px;
+                    // width: 350px;
                 }
             }
         }

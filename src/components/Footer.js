@@ -17,18 +17,18 @@ const Footer = () => {
             <nav>
                 <ul>
                     <Link to="register" smooth={true} duration={700} offset={-200}><li>Регистрация</li></Link>
-                    <Link to="buy" smooth={true} duration={300} offset={-80}><li>Купить билеты</li></Link>
+                    {/* <Link to="buy" smooth={true} duration={300} offset={-80}><li>Купить билеты</li></Link> */}
                     <Link to="footer" smooth={true} duration={300} offset={-80}><li>Контакты</li></Link>
                 </ul>
             </nav>
             <div className="footer__links">
-                <a href="#">
+                <a href="https://youtube.com/@ligastavok.mediabasket" target={"_blank"}>
                     <img src={youtube} alt="facebook" />
                 </a>
-                <a href="#">
+                <a href="https://t.me/ligastavok_mediabasket" target={"_blank"}>
                     <img src={telegram} alt="instagram" />
                 </a>
-                <a href="#">
+                <a href="https://vk.com/ligastavok_mediabasket" target={"_blank"}>
                     <img src={vk} alt="instagram" />
                 </a>
             </div>
@@ -44,7 +44,7 @@ const Footer = () => {
             </Link>
         </div>
         <div className="footer__line"></div>
-        <div className="footer__rights">2023 ©LSMB - All rights reserved.</div>
+        <div className="footer__rights">2023 ©LSMB - All rights reserved. Developed by ATF lab.</div>
     </div>
 </div>
   )
