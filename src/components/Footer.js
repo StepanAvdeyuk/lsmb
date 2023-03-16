@@ -44,7 +44,7 @@ const Footer = () => {
             </Link>
         </div>
         <div className="footer__line"></div>
-        <div className="footer__rights">2023 ©LSMB - All rights reserved. Developed by ATF lab.</div>
+        <div className="footer__rights">2023 ©LSMB - All rights reserved. Developed by <a href='https://ATFLAB.ru' target={"_blank"}>ATF lab</a>.</div>
     </div>
 </div>
   )
