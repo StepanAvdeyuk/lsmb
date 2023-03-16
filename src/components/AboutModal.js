@@ -20,14 +20,14 @@ const AboutModal = ({setIsOpenAboutModal, allowScroll}) => {
             <p className="team-modal__draft-text">Ни один любитель баскетбола не останется равнодушным. </p>
             <p className="team-modal__draft-text">Подписывайтесь на наши <a href='https://youtube.com/@ligastavok.mediabasket' target={"_blank"}>социальные сети</a> и увидимся на паркете</p>
             <div className="team-modal__draft-social">
-                <a href="#">
-                    <img src={youtube} alt="" />
+                <a href="https://youtube.com/@ligastavok.mediabasket" target={"_blank"}>
+                    <img src={youtube} alt="facebook" />
                 </a>
-                <a href="#">
-                    <img src={telegram} alt="" />
+                <a href="https://t.me/ligastavok_mediabasket" target={"_blank"}>
+                    <img src={telegram} alt="instagram" />
                 </a>
-                <a href="#">
-                    <img src={vk} alt="" />
+                <a href="https://vk.com/ligastavok_mediabasket" target={"_blank"}>
+                    <img src={vk} alt="instagram" />
                 </a>
             </div>
         </div>
