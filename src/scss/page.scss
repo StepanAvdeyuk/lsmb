@@ -647,7 +647,7 @@
         padding-top: 60px;
         height: 100%;
         width: 150px;
-        background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 80%);
+        // background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 80%);
         position: fixed;
         top: 0;
         left: 0;
@@ -662,7 +662,7 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: 60px;
+        top: 36px;
         height: 70px;
     }
     &__lsmb {
