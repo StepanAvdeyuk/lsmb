@@ -75,30 +75,35 @@ const Modal = ({setIsOpenModal, allowScroll}) => {
                             type="text"
                             name="name"
                             label="Ваше ФИО"
+                            onKeyPress={e => { e.which === 13 && e.preventDefault() }}
                     />
                     <TextField 
                             placeholder="Введите ваш e-mail"
                             type="text"
                             name="email"
                             label="E-mail"
+                            onKeyPress={e => { e.which === 13 && e.preventDefault() }}
                     />
                     <TextField 
                             placeholder="Введите ваш телефон"
                             type="text"
                             name="phoneNumber"
                             label="Ваш телефон"
+                            onKeyPress={e => { e.which === 13 && e.preventDefault() }}
                     />
                     <TextField  
                             placeholder="Введите ваши ссылки"
                             type="text"
                             name="socialNetworks"
                             label="Ссылки на ваши соцсети"
+                            onKeyPress={e => { e.which === 13 && e.preventDefault() }}
                     />
                     <TextField  
                             placeholder="Введите ваши спортивные достижения"
                             type="text"
                             name="sportingRecords"
                             label="Ваши спортивные достижения"
+                            onKeyPress={e => { e.which === 13 && e.preventDefault() }}
                     />
                     <button type="submit" className='modal__form-btn'>ОТПРАВИТЬ ДАННЫЕ</button>
                     <div className="modal__policy">
