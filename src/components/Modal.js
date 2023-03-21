@@ -41,14 +41,14 @@ const Modal = ({setIsOpenModal, allowScroll}) => {
 
     const sendData = (values) => {
         let data = {};
-        data.id = htmlId;
+        // data.id = htmlId;
         data.fio = values.name;
         data.email = values.email;
         data.phone = values.phoneNumber;
         data.socialNetworks = values.socialNetworks;
         data.sportingRecords = values.sportingRecords;
         console.log(data);
-        axios.post("https://my-parser.tw1.su/leads/add", data)
+        axios.post("https://media-basket.ru:3010/leads/add", data)
         .then((response) => {
         // console.log(response);
         }).catch(e => console.log(e));
